@@ -4,6 +4,10 @@ class UsersController < ApplicationController
   before_action :correct_user, only: [:edit, :update]
   before_action :admin_user, only: [:destroy, :edit_basic_info, :update_basic_info]
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  before_action :set_one_month, only: :show
+>>>>>>> add-user-attendances
 =======
   before_action :set_one_month, only: :show
 >>>>>>> add-user-attendances
@@ -67,7 +71,11 @@ class UsersController < ApplicationController
       params.require(:user).permit(:name, :email, :department, :password, :password_confirmation)
     end
 <<<<<<< HEAD
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> add-user-attendances
 =======
 
 >>>>>>> add-user-attendances

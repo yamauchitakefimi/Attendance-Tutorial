@@ -13,6 +13,10 @@ Rails.application.routes.draw do
       patch 'update_basic_info'
     end
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    resources :attendances, only: :update # この行を追加します。
+>>>>>>> add-user-attendances
 =======
     resources :attendances, only: :update # この行を追加します。
 >>>>>>> add-user-attendances

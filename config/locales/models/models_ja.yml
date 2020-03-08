@@ -11,6 +11,7 @@ ja:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
           department: 所属
           basic_time: 基本時間
@@ -21,6 +22,11 @@ ja:
           basic_time: 基本時間
           work_time: 勤務時間
 >>>>>>> add-basic-info
+=======
+          department: 所属
+          basic_time: 基本時間
+          work_time: 勤務時間
+>>>>>>> add-user-attendances
 =======
           department: 所属
           basic_time: 基本時間
