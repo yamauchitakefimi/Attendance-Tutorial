@@ -3,13 +3,17 @@ class UsersController < ApplicationController
   before_action :logged_in_user, only: [:index, :edit, :update, :destroy, :edit_basic_info, :update_basic_info]
   before_action :correct_user, only: [:edit, :update]
   before_action :admin_user, only: [:destroy, :edit_basic_info, :update_basic_info]
+<<<<<<< HEAD
+=======
+  before_action :set_one_month, only: :show
+>>>>>>> add-user-attendances
 
   def index
     @users = User.paginate(page: params[:page])
   end
 
   def show
-    @user = User.find(params[:id])
+    @worked_sum = @attendances.where.not(started_at: nil).count
   end
 
   def new
@@ -32,8 +36,8 @@ class UsersController < ApplicationController
 
   def update
     if @user.update_attributes(user_params)
-
-      # 更新に成功した場合の処理を記述します。
+      flash[:success] = "ユーザー情報を更新しました。"
+      redirect_to @user
     else
       render :edit      
     end
@@ -62,7 +66,11 @@ class UsersController < ApplicationController
     def user_params
       params.require(:user).permit(:name, :email, :department, :password, :password_confirmation)
     end
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> add-user-attendances
     def basic_info_params
       params.require(:user).permit(:department, :basic_time, :work_time)
     end
